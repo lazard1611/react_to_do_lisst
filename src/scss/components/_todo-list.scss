@@ -1,0 +1,9 @@
+.todo_list {
+
+}
+
+.todo_list__item {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

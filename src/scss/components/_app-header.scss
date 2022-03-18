@@ -1,0 +1,36 @@
+.head {
+  margin-bottom: 1rem;
+}
+
+.head__title {
+  margin-bottom: 1rem;
+
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: green;
+}
+
+.head__descrip {
+  margin-bottom: 1rem;
+
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: green;
+  letter-spacing: .2em;
+}
+
+.head__enter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.head__enter_list {
+
+}

@@ -1,0 +1,27 @@
+.add_item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.add_item__in {
+  @extend %label;
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.add_item__input {
+  @extend %input;
+}
+
+.add_item__btn {
+  @extend %btn_base;
+
+  min-width: 15rem;
+  text-transform: uppercase;
+}
+
+.add_item__btn_wrap {
+
+}

@@ -1,0 +1,11 @@
+.search {
+  margin-right: 1rem;
+}
+
+.search__in {
+  @extend %label;
+}
+
+.search__input {
+  @extend %input;
+}

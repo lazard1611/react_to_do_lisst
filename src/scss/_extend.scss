@@ -1,0 +1,36 @@
+%input {
+  display: block;
+  padding: 0 1rem;
+  font-size: 2rem;
+
+  &::placeholder {
+    font-size: inherit;
+  }
+}
+
+%label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+
+  height: 4rem;
+
+  border: 1px solid $black;
+  border-radius: var(--gl_radius);
+  box-shadow: none;
+}
+
+%btn_base {
+  @include btn(4rem, 4rem);
+
+  font-size: 1.8rem;
+  border: 1px solid $black;
+  background: $btn_bg;
+  transition: background-color .3s ease;
+
+  &:focus,
+  &:hover {
+    background-color: $bth_hover_bg;
+  }
+}
