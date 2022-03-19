@@ -1,5 +1,9 @@
 .btn_base {
   @extend %btn_base;
+
+  &.btn_base--active {
+    background: $bth_hover_bg;
+  }
 }
 
 .icon--size-mod {

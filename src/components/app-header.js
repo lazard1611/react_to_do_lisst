@@ -5,18 +5,32 @@ import SearchPanel from "./search-panel";
 export default class AppHeader extends Component {
 
     render() {
-        const { toDo, done, searchItem } = this.props
+        const { toDo, done, searchItem, filter, onFilterChange } = this.props
 
         const headButton = [
-            {props: 'All', id: 1},
-            {props: 'Active', id: 2},
-            {props: 'Done', id: 3},
+            {
+                label: 'All',
+                name: 'all'
+            },
+            {
+                label: 'Active',
+                name: 'active'
+            },
+            {
+                label: 'Done',
+                name: 'done'
+            },
         ]
 
-        const el = headButton.map((item) => {
+        const btn = headButton.map(({ label, name }) => {
+            const isActive = filter === name;
+            const clazz = isActive ? 'btn_base--active' : ''
             return (
-                <li className= "list_btn__item" key={ item.id }>
-                    <button type="text" className="btn_base">{ item.props }</button>
+                <li className= "list_btn__item" key={ name }>
+                    <button type="button"
+                            className={`btn_base ${clazz}`}
+                            onClick={() => onFilterChange(name)}
+                    >{ label }</button>
                 </li>
             );
         });
@@ -29,7 +43,7 @@ export default class AppHeader extends Component {
                     <SearchPanel searchItem={ searchItem }/>
                     <div className="head__enter_list">
                         <ul className= "list_btn">
-                            { el }
+                            { btn }
                         </ul>
                     </div>
                 </div>
